@@ -11,3 +11,18 @@ body{
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+main{
+    background-color: red;
+    border: 5px solid white;
+    width: 50%;
+}
+
+
+
+.pokedex-header{
+    background-color: blue;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 25px;
+}

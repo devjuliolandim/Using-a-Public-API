@@ -2,17 +2,24 @@
 
 <main>
 
-    <div class="pokedex-header"></div>
+    <div class="pokedex-header">
+        <div class="blue-ball"></div>
+        <div class="ball-container">
+            <div class="ball red"></div>
+            <div class="ball yellow"></div>
+            <div class="ball green"></div>
+        </div>
+    </div>
 
     <%if(!locals.data){%>
         <p>Click in the "GET POKEMON" Button!</p>
     <%}else{%>
         <img src="<%= data.image %>" alt="<%= data.name%> Image">
-        <p> <%= data.name %>  </p>
+        <p id="pokemon-name"> <%= data.name %>  </p>
     <% } %>    
 
     <form action="/get-pokemon" method="get">
-        <input type="submit" value="GET POKEMON">
+        <input id="get-pokemon" type="submit" value="GET POKEMON">
     </form>
 
 </main>

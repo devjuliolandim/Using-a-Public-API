@@ -1,18 +1,16 @@
 <%- include("partials/header.ejs") %>
 
 <main>
+    <%if(!locals.data){%>
+        <p>Click in the "GET POKEMON" Button!</p>
+    <%}else{%>
+        <img src="<%= data.image %>" alt="<%= data.name%> Image">
+        <p> <%= data.name %>  </p>
+    <% } %>    
 
     <form action="/get-pokemon" method="get">
         <input type="submit" value="GET POKEMON">
     </form>
-    
-    
-    <%if(!locals.data){%>
-        <p>Click in the "GET POKEMON" Button!</p>
-    <%}else{%>
-        <p> <%= data.name %>  </p>
-        <img src="<%= data.image %>" alt="Pokemon Image">
-    <% } %>    
 
 </main>
 

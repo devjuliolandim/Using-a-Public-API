@@ -1,5 +1,18 @@
 <%- include("partials/header.ejs") %>
 
+<main>
 
+    <form action="/get-pokemon" method="get">
+        <input type="submit" value="GET POKEMON">
+    </form>
+    
+    
+    <%if(!locals.pokemons){%>
+        <p>no info was send</p>
+    <%}else{%>
+        <p> <%= pokemons %>  </p>
+    <% } %>    
+
+</main>
 
 <%- include("partials/footer.ejs") %>

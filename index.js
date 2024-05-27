@@ -12,6 +12,9 @@ function randomPokemonFirstGen(){
     return Math.floor(Math.random()*150) + 1;
 }
 
+function capitalizeFirstLetter(pokemonName){
+    return pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
+}
 
 //MiddleWares
 app.use(express.static("public"));
@@ -27,9 +30,14 @@ app.get("/get-pokemon", async (req,res)=>{
         const response = await axios.get(API_URL + `/pokemon/${randomPokemonFirstGen()}`);
         
         //Pokemon Name
-        const pokemonName = response.data.name;
+        let pokemonName = response.data.name;
+        pokemonName = capitalizeFirstLetter(pokemonName) // Capitalizing first letter
 
-        res.render("index.ejs", {pokemons: JSON.stringify(pokemonName)});
+        //Pokemon Image
+        const pokemonImage = response.data.sprites.front_default;
+
+        res.render("index.ejs",{data: {name: pokemonName, image: pokemonImage}});
+
     }catch(err){
         console.error("An error has ocurred: " + err);
         res.status(500).send("An error has ocurred " + err);

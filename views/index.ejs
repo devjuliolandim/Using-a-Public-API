@@ -7,10 +7,11 @@
     </form>
     
     
-    <%if(!locals.pokemons){%>
-        <p>no info was send</p>
+    <%if(!locals.data){%>
+        <p>Click in the "GET POKEMON" Button!</p>
     <%}else{%>
-        <p> <%= pokemons %>  </p>
+        <p> <%= data.name %>  </p>
+        <img src="<%= data.image %>" alt="Pokemon Image">
     <% } %>    
 
 </main>

@@ -7,9 +7,12 @@ const PORT = 3000;
 const app = express();
 const API_URL = "https://pokeapi.co/api/v2";
 
+//How many pokemons?
+const pokemonsRange = 500;
+
 //Functions
 function randomPokemonFirstGen(){
-    return Math.floor(Math.random()*150) + 1;
+    return Math.floor(Math.random()*pokemonsRange) + 1;
 }
 
 function capitalizeFirstLetter(pokemonName){

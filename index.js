@@ -11,7 +11,7 @@ const API_URL = "https://pokeapi.co/api/v2";
 const pokemonsRange = 500;
 
 //Functions
-function randomPokemonFirstGen(){
+function randomPokemon(){
     return Math.floor(Math.random()*pokemonsRange) + 1;
 }
 
@@ -30,7 +30,7 @@ app.get("/", (req, res)=>{
 app.get("/get-pokemon", async (req,res)=>{
     try{
         //Promise coming from the API
-        const response = await axios.get(API_URL + `/pokemon/${randomPokemonFirstGen()}`);
+        const response = await axios.get(API_URL + `/pokemon/${randomPokemon()}`);
         
         //Pokemon Name
         let pokemonName = response.data.name;

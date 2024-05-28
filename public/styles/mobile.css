@@ -1,18 +1,6 @@
 @media (max-width: 600px){
-    
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-   
+      
     img{
-        background-color: white;
-        display: block;
-        margin: auto;
-        border-radius: 20px;
-        border: 1px solid black;
-    
         width: 187.41px;
         height: 187.41px;
     }

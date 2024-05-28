@@ -10,17 +10,38 @@ body{
     background-color: #252525;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
     background-color: rgb(223, 0, 0);
     border: 5px solid white;
-    width: 50%;
+    
+    width: 40%;
 
     box-shadow: 1px 5px 9px black;
 
     border-radius: 20px;
 }
+
+
+img{
+    background-color: white;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+
+    height: 200px;
+    width: 200px;
+
+}
+
 
 
 .pokedex-header{
@@ -93,4 +114,15 @@ form{
 
     font-size: 1.1em;
     font-weight: 900;
+
+    cursor: pointer;
+}
+
+/*Media Queries*/
+
+
+@media (max-width: 800px){
+    main{
+        width: 50%;
+    }
 }
